@@ -19,14 +19,14 @@ pipeline {
             agent none
             steps {
                 script {
-                    def deploymentApproval = input message: 'Apply Terraform ?', ok: 'Apply', parameters: [booleanParam('Apply?')]
+                    def deploymentApproval = input message: 'Apply Terraform ?', ok: 'Apply']
                 }
             }
         }
         stage('Deploy') {
             agent any
             steps {
-                echo deploymentApproval
+                sh 'ls -la'
             }
         }
     }
