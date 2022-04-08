@@ -1,5 +1,4 @@
 pipeline {
-    tool name: 'Terraform', type: 'terraform'
     agent none
     stages {
         stage('Build') {
@@ -10,6 +9,7 @@ pipeline {
         }
         stage('Init') {
             agent any
+            tool name: 'Terraform', type: 'terraform'
             steps {
                sh 'terraform init'
                sh 'terraform plan'
