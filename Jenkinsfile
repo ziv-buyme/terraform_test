@@ -1,4 +1,5 @@
 pipeline {
+    tool name: 'Terraform', type: 'terraform'
     agent none
     stages {
         stage('Build') {
