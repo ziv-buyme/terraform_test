@@ -19,7 +19,7 @@ pipeline {
             agent none
             steps {
                 script {
-                    def deploymentApproval = input message: 'Apply Terraform ?', ok: 'Apply']
+                    def deploymentApproval = input message: 'Apply Terraform ?', ok: 'Apply'
                 }
             }
         }
