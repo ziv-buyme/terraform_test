@@ -10,8 +10,8 @@ pipeline {
         stage('Init') {
             agent any
             steps {
-               sh 'terraform init'
-               sh 'terraform plan'
+               sh 'terraform init -no-color'
+               sh 'terraform plan -no-color'
             }
         }
         stage('Approval') {
